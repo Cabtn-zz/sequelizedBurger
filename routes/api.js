@@ -5,4 +5,4 @@ const router = express.Router()
 module.exports = router
   .get('/index', controller.FindAll)
   .post('/index', controller.Create)
-  .post('/index', controller.Update)
+  .post('/', controller.Update)

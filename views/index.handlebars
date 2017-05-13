@@ -2,11 +2,11 @@
 <!--Main content-->
 <div class="container" id="content-wrapper">
   <div class="row">
-    <!--Left side output-->
+
     <div class="col-xs-3 col-xs-offset-3" id="left-side-output">
       {{#each burgers}}
           {{#unless this.devoured}}
-            <form action="/index?_method=PUT" method="POST" class="button-size">
+            <form action="/" method="POST" class="button-size">
               <div id="inner-form-left">
                 <span id="single-burger-left"> {{this.id}}. {{this.burger_name}} </span>
                 <input type="hidden" name="id" value="{{this.id}}">

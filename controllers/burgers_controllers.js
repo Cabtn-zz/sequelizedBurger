@@ -24,11 +24,13 @@ const Create = (req, res) => {
 
 const Update = (req,res) => {
   db.Burger.update({
-    where: {
-      burger_name: req.body.burger_name
-    },
     devoured: true
+  }, {
+    where: {
+      id: req.body.id
+    }
   }).then(data =>{
+    console.log("UPDATE METHOD" + req.body.id);
     res.redirect("/index")
   })
 }
